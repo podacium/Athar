@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-ar: "Tajawal", system-ui, -apple-system, sans-serif;
+  --font-display: "Fraunces", "Tajawal", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Tajawal", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F2EFE9;
+  --color-ink: #17211C;
+  --color-ink-muted: #52615A;
+  --color-border-hairline: #E5E1D8;
+  --color-forest: #1B4D3E;
+  --color-forest-hover: #143B2F;
+  --color-sage: #4A7C59;
+  --color-amber-trust: #B45309;
+  --color-crimson-alert: #B91C1C;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    scroll-behavior: smooth;
+  }
+
+  html[dir="rtl"] body {
+    font-family: var(--font-ar);
+  }
+
+  html[dir="ltr"] body {
+    font-family: var(--font-sans);
+  }
+
+  html[dir="ltr"] .font-editorial {
+    font-family: var(--font-display);
+  }
+
+  html[dir="rtl"] .font-editorial {
+    font-family: var(--font-ar);
+    font-weight: 800;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  button, a, input, select, textarea {
+    outline-color: var(--color-forest);
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

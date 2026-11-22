@@ -1,0 +1,6 @@
+{
+  "name": "Athar (أثر) — Verified Green Marketplace Algeria",
+  "description": "Trust-first bilingual marketplace for verified organic and sustainable Algerian products powered by Digital SPG, cryptographic Digital Product Passports, and Atharouk green loyalty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
